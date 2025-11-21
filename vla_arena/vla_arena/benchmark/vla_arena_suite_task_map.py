@@ -148,15 +148,15 @@ vla_arena_task_map = {
         1: [
             "pick_the_apple_on_the_table_and_place_it_on_the_plate",
             "pick_the_banana_on_the_table_and_place_it_on_the_plate",
+            "pick_the_carrot_on_the_table_and_place_it_on_the_plate",
             "pick_the_mango_on_the_table_and_place_it_on_the_bowl",
-            "pick_the_peach_in_the_first_layer_of_the_drawer_and_place_it_on_the_plate",
             "pick_the_tomato_on_the_table_and_place_it_on_the_bowl",
         ],
         2: [
             "pick_the_apple_on_the_table_and_place_it_on_the_plate",
             "pick_the_banana_on_the_table_and_place_it_on_the_plate",
+            "pick_the_carrot_on_the_table_and_place_it_on_the_plate",
             "pick_the_mango_on_the_table_and_place_it_on_the_bowl",
-            "pick_the_peach_in_the_first_layer_of_the_drawer_and_place_it_on_the_plate",
             "pick_the_tomato_on_the_table_and_place_it_on_the_bowl",
         ],
     },
