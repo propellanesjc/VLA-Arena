@@ -11,7 +11,7 @@
 </p>
 
 <div align="center">
-  <img src="./image/logo.jpeg" width="75%"/>
+  <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/logo.jpeg" width="75%"/>
 </div>
 
 VLA-Arena is an open-source benchmark for systematic evaluation of Vision-Language-Action (VLA) models. VLA-Arena provides a full toolchain covering *scenes modeling*, *demonstrations collection*, *models training* and *evaluation*. It features 170 tasks across 11 specialized suites, hierarchical difficulty levels (L0-L2), and comprehensive metrics for safety, generalization, and efficiency assessment.
@@ -32,20 +32,6 @@ VLA-Arena focuses on four key domains:
 - **🔌 Plug-and-Play Evaluation**: Seamlessly integrate and benchmark your own VLA models. Our framework is designed with a unified API, making the evaluation of new architectures straightforward with minimal code changes.
 - **🛠️ Effortless Task Customization**: Leverage the Constrained Behavior Domain Definition Language (CBDDL) to rapidly define entirely new tasks and safety constraints. Its declarative nature allows you to achieve comprehensive scenario coverage with minimal effort.
 - **📊 Systematic Difficulty Scaling**: Systematically assess model capabilities across three distinct difficulty levels (L0→L1→L2). Isolate specific skills and pinpoint failure points, from basic object manipulation to complex, long-horizon tasks.
-
-If you find VLA-Arena useful, please cite it in your publications.
-
-```bibtex
-@misc{zhang2025vlaarena,
-  title={VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models},
-  author={Borong Zhang and Jiahao Li and Jiachen Shen and Yishuai Cai and Yuhao Zhang and Yuanpei Chen and Juntao Dai and Jiaming Ji and Yaodong Yang},
-  year={2025},
-  eprint={2512.22539},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2512.22539}
-}
-```
 
 ## 📚 Table of Contents
 
@@ -180,32 +166,32 @@ VLA-Arena provides 11 specialized task suites with 150+ tasks total, organized i
 
 | Suite Name | L0 | L1 | L2 |
 |------------|----|----|----|
-| **Static Obstacles** | <img src="image/static_obstacles_0.png" width="175" height="175"> | <img src="image/static_obstacles_1.png" width="175" height="175"> | <img src="image/static_obstacles_2.png" width="175" height="175"> |
-| **Cautious Grasp** | <img src="image/safe_pick_0.png" width="175" height="175"> | <img src="image/safe_pick_1.png" width="175" height="175"> | <img src="image/safe_pick_2.png" width="175" height="175"> |
-| **Hazard Avoidance** | <img src="image/dangerous_zones_0.png" width="175" height="175"> | <img src="image/dangerous_zones_1.png" width="175" height="175"> | <img src="image/dangerous_zones_2.png" width="175" height="175"> |
-| **State Preservation** | <img src="image/task_object_state_maintenance_0.png" width="175" height="175"> | <img src="image/task_object_state_maintenance_1.png" width="175" height="175"> | <img src="image/task_object_state_maintenance_2.png" width="175" height="175"> |
-| **Dynamic Obstacles** | <img src="image/dynamic_obstacle_0.png" width="175" height="175"> | <img src="image/dynamic_obstacle_1.png" width="175" height="175"> | <img src="image/dynamic_obstacle_2.png" width="175" height="175"> |
+| **Static Obstacles** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_2.png" width="175" height="175"> |
+| **Cautious Grasp** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_2.png" width="175" height="175"> |
+| **Hazard Avoidance** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_2.png" width="175" height="175"> |
+| **State Preservation** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_2.png" width="175" height="175"> |
+| **Dynamic Obstacles** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_2.png" width="175" height="175"> |
 
 ### 🔄 Distractor Suites Visualization
 
 | Suite Name | L0 | L1 | L2 |
 |------------|----|----|----|
-| **Static Distractors** | <img src="image/robustness_0.png" width="175" height="175"> | <img src="image/robustness_1.png" width="175" height="175"> | <img src="image/robustness_2.png" width="175" height="175"> |
-| **Dynamic Distractors** | <img src="image/moving_obstacles_0.png" width="175" height="175"> | <img src="image/moving_obstacles_1.png" width="175" height="175"> | <img src="image/moving_obstacles_2.png" width="175" height="175"> |
+| **Static Distractors** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_2.png" width="175" height="175"> |
+| **Dynamic Distractors** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_2.png" width="175" height="175"> |
 
 ### 🎯 Extrapolation Suites Visualization
 
 | Suite Name | L0 | L1 | L2 |
 |------------|----|----|----|
-| **Preposition Combinations** | <img src="image/preposition_generalization_0.png" width="175" height="175"> | <img src="image/preposition_generalization_1.png" width="175" height="175"> | <img src="image/preposition_generalization_2.png" width="175" height="175"> |
-| **Task Workflows** | <img src="image/workflow_generalization_0.png" width="175" height="175"> | <img src="image/workflow_generalization_1.png" width="175" height="175"> | <img src="image/workflow_generalization_2.png" width="175" height="175"> |
-| **Unseen Objects** | <img src="image/unseen_object_generalization_0.png" width="175" height="175"> | <img src="image/unseen_object_generalization_1.png" width="175" height="175"> | <img src="image/unseen_object_generalization_2.png" width="175" height="175"> |
+| **Preposition Combinations** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_2.png" width="175" height="175"> |
+| **Task Workflows** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_2.png" width="175" height="175"> |
+| **Unseen Objects** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_2.png" width="175" height="175"> |
 
 ### 📈 Long Horizon Suite Visualization
 
 | Suite Name | L0 | L1 | L2 |
 |------------|----|----|----|
-| **Long Horizon** | <img src="image/long_horizon_0.png" width="175" height="175"> | <img src="image/long_horizon_1.png" width="175" height="175"> | <img src="image/long_horizon_2.png" width="175" height="175"> |
+| **Long Horizon** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_2.png" width="175" height="175"> |
 
 ## Installation
 
@@ -337,103 +323,53 @@ vla-arena.manage-tasks upload ./packages/my_task.vlap --repo your-username/your-
 
 ### Performance Evaluation of VLA Models on the VLA-Arena Benchmark
 
-We compare six models across four dimensions: **Safety**, **Distractor**, **Extrapolation**, and **Long Horizon**. Performance trends over three difficulty levels (L0–L2) are shown with a unified scale (0.0–1.0) for cross-model comparison. Safety tasks report both cumulative cost (CC, shown in parentheses) and success rate (SR), while other tasks report only SR. **Bold** numbers mark the highest performance per difficulty level.
-
-#### 🛡️ Safety Performance
-
-| Task | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **StaticObstacles** | | | | | | |
-| L0 | **1.00** (CC: 0.0) | **1.00** (CC: 0.0) | 0.98 (CC: 0.0) | **1.00** (CC: 0.0) | 0.84 (CC: 0.0) | 0.14 (CC: 0.0) |
-| L1 | 0.60 (CC: 8.2) | **0.20** (CC: 45.4) | **0.74** (CC: 8.0) | 0.40 (CC: 56.0) | 0.42 (CC: 9.7) | 0.00 (CC: 8.8) |
-| L2 | 0.00 (CC: 38.2) | 0.20 (CC: 49.0) | **0.32** (CC: 28.1) | 0.20 (CC: 6.8) | 0.18 (CC: 60.6) | 0.00 (CC: 2.6) |
-| **CautiousGrasp** | | | | | | |
-| L0 | **0.80** (CC: 6.6) | 0.60 (CC: 3.3) | **0.84** (CC: 3.5) | 0.64 (CC: 3.3) | **0.80** (CC: 3.3) | 0.52 (CC: 2.8) |
-| L1 | 0.40 (CC: 120.2) | 0.50 (CC: 6.3) | 0.08 (CC: 16.4) | 0.06 (CC: 15.6) | **0.60** (CC: 52.1) | 0.28 (CC: 30.7) |
-| L2 | 0.00 (CC: 50.1) | 0.00 (CC: 2.1) | 0.00 (CC: 0.5) | 0.00 (CC: 1.0) | 0.00 (CC: 8.5) | **0.04** (CC: 0.3) |
-| **HazardAvoidance** | | | | | | |
-| L0 | 0.20 (CC: 17.2) | 0.36 (CC: 9.4) | **0.74** (CC: 6.4) | 0.16 (CC: 10.4) | **0.70** (CC: 5.3) | 0.16 (CC: 10.4) |
-| L1 | 0.02 (CC: 22.8) | 0.00 (CC: 22.9) | 0.00 (CC: 16.8) | 0.00 (CC: 15.4) | **0.12** (CC: 18.3) | 0.00 (CC: 19.5) |
-| L2 | **0.20** (CC: 15.7) | **0.20** (CC: 14.7) | 0.00 (CC: 15.6) | **0.20** (CC: 13.9) | 0.04 (CC: 16.7) | 0.00 (CC: 18.0) |
-| **StatePreservation** | | | | | | |
-| L0 | **1.00** (CC: 0.0) | **1.00** (CC: 0.0) | 0.98 (CC: 0.0) | 0.60 (CC: 0.0) | 0.90 (CC: 0.0) | 0.50 (CC: 0.0) |
-| L1 | 0.66 (CC: 6.6) | **0.76** (CC: 7.6) | 0.64 (CC: 6.4) | 0.56 (CC: 5.6) | **0.76** (CC: 7.6) | 0.18 (CC: 1.8) |
-| L2 | 0.34 (CC: 21.0) | 0.20 (CC: 4.6) | **0.48** (CC: 15.8) | 0.20 (CC: 4.2) | **0.54** (CC: 16.4) | 0.08 (CC: 9.6) |
-| **DynamicObstacles** | | | | | | |
-| L0 | 0.60 (CC: 3.6) | **0.80** (CC: 8.8) | 0.92 (CC: 6.0) | **0.80** (CC: 3.6) | 0.26 (CC: 7.1) | 0.32 (CC: 2.1) |
-| L1 | 0.60 (CC: 5.1) | 0.56 (CC: 3.7) | **0.64** (CC: 3.3) | 0.30 (CC: 8.8) | **0.58** (CC: 16.3) | 0.24 (CC: 16.6) |
-| L2 | 0.26 (CC: 5.6) | 0.10 (CC: 1.8) | **0.10** (CC: 40.2) | 0.00 (CC: 21.2) | 0.08 (CC: 6.0) | **0.02** (CC: 0.9) |
-
-#### 🔄 Distractor Performance
-
-| Task | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **StaticDistractors** | | | | | | |
-| L0 | 0.80 | **1.00** | 0.92 | **1.00** | **1.00** | 0.54 |
-| L1 | 0.20 | 0.00 | 0.02 | **0.22** | 0.12 | 0.00 |
-| L2 | 0.00 | **0.20** | 0.02 | 0.00 | 0.00 | 0.00 |
-| **DynamicDistractors** | | | | | | |
-| L0 | 0.60 | **1.00** | 0.78 | 0.80 | 0.78 | 0.42 |
-| L1 | 0.58 | 0.54 | **0.70** | 0.28 | 0.54 | 0.30 |
-| L2 | 0.40 | **0.40** | 0.18 | 0.04 | 0.04 | 0.00 |
-
-#### 🎯 Extrapolation Performance
-
-| Task | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **PrepositionCombinations** | | | | | | |
-| L0 | 0.68 | 0.62 | **0.76** | 0.14 | 0.50 | 0.20 |
-| L1 | 0.04 | **0.18** | 0.10 | 0.00 | 0.02 | 0.00 |
-| L2 | 0.00 | 0.00 | 0.00 | 0.00 | **0.02** | 0.00 |
-| **TaskWorkflows** | | | | | | |
-| L0 | **0.82** | 0.74 | 0.72 | 0.24 | 0.76 | 0.32 |
-| L1 | **0.20** | 0.00 | 0.00 | 0.00 | 0.04 | 0.04 |
-| L2 | **0.16** | 0.00 | 0.00 | 0.00 | 0.20 | 0.00 |
-| **UnseenObjects** | | | | | | |
-| L0 | **0.80** | 0.60 | **0.80** | 0.00 | 0.34 | 0.16 |
-| L1 | 0.60 | 0.40 | 0.52 | 0.00 | **0.76** | 0.18 |
-| L2 | 0.00 | **0.20** | 0.04 | 0.00 | 0.16 | 0.00 |
-
-#### 📈 Long Horizon Performance
-
-| Task | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **LongHorizon** | | | | | | |
-| L0 | 0.80 | 0.80 | **0.92** | 0.62 | 0.66 | 0.74 |
-| L1 | 0.00 | 0.00 | **0.02** | 0.00 | 0.00 | 0.00 |
-| L2 | 0.00 | 0.00 | **0.00** | 0.00 | 0.00 | 0.00 |
+We compare VLA models across four dimensions: **Safety**, **Distractor**, **Extrapolation**, and **Long Horizon**. Performance trends over three difficulty levels (L0–L2) are shown with a unified scale (0.0–1.0) for cross-model comparison. You can access detailed results and comparisons in our [leaderboard](https://vla-arena.github.io/#leaderboard).
 
 ---
 
-## Contributing
+## Sharing Research Results
 
-You can contribute to VLA-Arena in multiple ways:
+VLA-Arena provides a series of tools and interfaces to help you easily share your research results, enabling the community to understand and reproduce your work. This guide will introduce how to use these tools.
 
-### 🤖 Uploading Your Model Results
+### 🤖 Sharing Model Results
 
+To share your model results with the community:
 
-**How to contribute:**
-1. Evaluate your model on VLA-Arena tasks
-2. Follow the submission guidelines in our leaderboard repository
-3. Submit a pull request with your results
+1. **Evaluate Your Model**: Evaluate your model on VLA-Arena tasks
+2. **Submit Results**: Follow the [submission guidelines](https://github.com/vla-arena/vla-arena.github.io#contributing-your-model-results) in our leaderboard repository
+3. **Create Pull Request**: Submit a pull request containing your model results
 
-📝 **Detailed Instructions**: [Uploading Your Model Results](https://github.com/vla-arena/vla-arena.github.io#contributing-your-model-results)
+### 🎯 Sharing Task Designs
 
-### 🎯 Uploading Your Tasks
+Share your custom tasks through the following steps, enabling the community to reproduce your task configurations:
 
+1. **Design Tasks**: Use CBDDL to [design your custom tasks](docs/scene_construction.md)
+2. **Package Tasks**: Follow our guide to [package and submit your tasks](https://github.com/PKU-Alignment/VLA-Arena#-create-and-share-custom-tasks) to your custom HuggingFace repository
+3. **Update Task Store**: Open a [Pull Request](https://github.com/vla-arena/vla-arena.github.io#contributing-your-tasks) to update your tasks in the VLA-Arena [task store](https://vla-arena.github.io/#taskstore)
 
-**How to contribute:**
-1. Design your custom tasks using CBDDL
-2. Package your tasks following our guidelines
-3. Submit your tasks to our task store
-
-📝 **Detailed Instructions**: [Uploading Your Tasks](https://github.com/vla-arena/vla-arena.github.io#contributing-your-tasks)
-
-### 💡 Other Ways to Contribute
+## 💡 Contributing
 
 - **Report Issues**: Found a bug? [Open an issue](https://github.com/PKU-Alignment/VLA-Arena/issues)
 - **Improve Documentation**: Help us make the docs better
 - **Feature Requests**: Suggest new features or improvements
+
+---
+
+## Citing VLA-Arena
+
+If you find VLA-Arena useful, please cite it in your publications.
+
+```bibtex
+@misc{zhang2025vlaarena,
+  title={VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models},
+  author={Borong Zhang and Jiahao Li and Jiachen Shen and Yishuai Cai and Yuhao Zhang and Yuanpei Chen and Juntao Dai and Jiaming Ji and Yaodong Yang},
+  year={2025},
+  eprint={2512.22539},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2512.22539}
+}
+```
 
 ---
 
@@ -450,6 +386,6 @@ This project is licensed under the Apache 2.0 license - see [LICENSE](LICENSE) f
 ---
 
 <p align="center">
-  <b>VLA-Arena: Advancing Vision-Language-Action Models Through Comprehensive Evaluation</b><br>
+  <b>VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models</b><br>
   Made with ❤️ by the VLA-Arena Team
 </p>

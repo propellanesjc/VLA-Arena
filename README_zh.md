@@ -11,7 +11,7 @@
 </p>
 
 <div align="center">
-  <img src="./image/logo.jpeg" width="75%"/>
+  <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/logo.jpeg" width="75%"/>
 </div>
 
 VLA-Arena 是一个开源的基准测试平台，用于系统评测视觉-语言-动作（VLA）模型。VLA-Arena 提供完整的工具链，涵盖*场景建模*、*行为收集*、*模型训练*和*评测*。涵盖13个专业套件、150+任务、分层难度级别（L0-L2），以及用于安全性、泛化性和效率评测的综合指标。
@@ -38,20 +38,6 @@ VLA-Arena 囊括四个任务类别：
 - **🛠️ 轻松任务定制**：利用约束行为定义语言（CBDDL）快速定义全新的任务和安全约束。其声明性特性使你能够以最少的努力实现全面的场景覆盖。
 
 - **📊 系统难度扩展**：系统评测模型在三个不同难度级别（L0→L1→L2）的能力。隔离特定技能并精确定位失败点，从基本物体操作到复杂的长时域任务。
-
-如果你觉得VLA-Arena有用，请在你的出版物中引用它。
-
-```bibtex
-@misc{zhang2025vlaarena,
-  title={VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models},
-  author={Borong Zhang and Jiahao Li and Jiachen Shen and Yishuai Cai and Yuhao Zhang and Yuanpei Chen and Juntao Dai and Jiaming Ji and Yaodong Yang},
-  year={2025},
-  eprint={2512.22539},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO},
-  url={https://arxiv.org/abs/2512.22539}
-}
-```
 
 ## 📚 目录
 
@@ -122,7 +108,7 @@ pip install -e .
 python scripts/collect_demonstration.py --bddl-file tasks/your_task.bddl
 ```
 
-这将打开一个交互式仿真环境，您可以使用键盘控制机器人手臂来完成 BDDL 文件中指定的任务。
+这将打开一个交互式仿真环境，你可以使用键盘控制机器人手臂来完成 BDDL 文件中指定的任务。
 
 ### 3. 模型微调与评估
 
@@ -186,32 +172,32 @@ VLA-Arena提供11个专业任务套件，共150+个任务，分为四个主要�
 
 | 套件名称 | L0 | L1 | L2 |
 |----------|----|----|----|
-| **静态障碍物** | <img src="image/static_obstacles_0.png" width="175" height="175"> | <img src="image/static_obstacles_1.png" width="175" height="175"> | <img src="image/static_obstacles_2.png" width="175" height="175"> |
-| **风险感知抓取** | <img src="image/safe_pick_0.png" width="175" height="175"> | <img src="image/safe_pick_1.png" width="175" height="175"> | <img src="image/safe_pick_2.png" width="175" height="175"> |
-| **危险避免** | <img src="image/dangerous_zones_0.png" width="175" height="175"> | <img src="image/dangerous_zones_1.png" width="175" height="175"> | <img src="image/dangerous_zones_2.png" width="175" height="175"> |
-| **物体状态保持** | <img src="image/task_object_state_maintenance_0.png" width="175" height="175"> | <img src="image/task_object_state_maintenance_1.png" width="175" height="175"> | <img src="image/task_object_state_maintenance_2.png" width="175" height="175"> |
-| **动态障碍物** | <img src="image/dynamic_obstacle_0.png" width="175" height="175"> | <img src="image/dynamic_obstacle_1.png" width="175" height="175"> | <img src="image/dynamic_obstacle_2.png" width="175" height="175"> |
+| **静态障碍物** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/static_obstacles_2.png" width="175" height="175"> |
+| **风险感知抓取** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/safe_pick_2.png" width="175" height="175"> |
+| **危险避免** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dangerous_zones_2.png" width="175" height="175"> |
+| **物体状态保持** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/task_object_state_maintenance_2.png" width="175" height="175"> |
+| **动态障碍物** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/dynamic_obstacle_2.png" width="175" height="175"> |
 
 ### 🔄 干扰项套件可视化
 
 | 套件名称 | L0 | L1 | L2 |
 |----------|----|----|----|
-| **静态干扰物** | <img src="image/robustness_0.png" width="175" height="175"> | <img src="image/robustness_1.png" width="175" height="175"> | <img src="image/robustness_2.png" width="175" height="175"> |
-| **动态干扰物** | <img src="image/moving_obstacles_0.png" width="175" height="175"> | <img src="image/moving_obstacles_1.png" width="175" height="175"> | <img src="image/moving_obstacles_2.png" width="175" height="175"> |
+| **静态干扰物** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/robustness_2.png" width="175" height="175"> |
+| **动态干扰物** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/moving_obstacles_2.png" width="175" height="175"> |
 
 ### 🎯 外推能力套件可视化
 
 | 套件名称 | L0 | L1 | L2 |
 |----------|----|----|----|
-| **物体介词组合** | <img src="image/preposition_generalization_0.png" width="175" height="175"> | <img src="image/preposition_generalization_1.png" width="175" height="175"> | <img src="image/preposition_generalization_2.png" width="175" height="175"> |
-| **任务工作流** | <img src="image/workflow_generalization_0.png" width="175" height="175"> | <img src="image/workflow_generalization_1.png" width="175" height="175"> | <img src="image/workflow_generalization_2.png" width="175" height="175"> |
-| **未见物体** | <img src="image/unseen_object_generalization_0.png" width="175" height="175"> | <img src="image/unseen_object_generalization_1.png" width="175" height="175"> | <img src="image/unseen_object_generalization_2.png" width="175" height="175"> |
+| **物体介词组合** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/preposition_generalization_2.png" width="175" height="175"> |
+| **任务工作流** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/workflow_generalization_2.png" width="175" height="175"> |
+| **未见物体** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/unseen_object_generalization_2.png" width="175" height="175"> |
 
 ### 📈 长程规划套件可视化
 
 | 套件名称 | L0 | L1 | L2 |
 |----------|----|----|----|
-| **长时域** | <img src="image/long_horizon_0.png" width="175" height="175"> | <img src="image/long_horizon_1.png" width="175" height="175"> | <img src="image/long_horizon_2.png" width="175" height="175"> |
+| **长时域** | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_0.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_1.png" width="175" height="175"> | <img src="https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/main/image/long_horizon_2.png" width="175" height="175"> |
 
 ## 安装
 
@@ -341,102 +327,52 @@ vla-arena.manage-tasks upload ./packages/my_task.vlap --repo your-username/your-
 
 ### VLA模型在VLA-Arena基准测试上的性能评估
 
-我们在四个维度上比较了六个模型：**安全性**、**干扰项**、**外推能力**和**长程规划**。三个难度级别（L0–L2）的性能趋势以统一尺度（0.0–1.0）显示，便于跨模型比较。安全任务同时报告累积成本（CC，括号内显示）和成功率（SR），而其他任务仅报告成功率。**粗体**数字表示每个难度级别的最高性能。
-
-#### 🛡️ 安全性能
-
-| 任务 | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **StaticObstacles** | | | | | | |
-| L0 | **1.00** (CC: 0.0) | **1.00** (CC: 0.0) | 0.98 (CC: 0.0) | **1.00** (CC: 0.0) | 0.84 (CC: 0.0) | 0.14 (CC: 0.0) |
-| L1 | 0.60 (CC: 8.2) | **0.20** (CC: 45.4) | **0.74** (CC: 8.0) | 0.40 (CC: 56.0) | 0.42 (CC: 9.7) | 0.00 (CC: 8.8) |
-| L2 | 0.00 (CC: 38.2) | 0.20 (CC: 49.0) | **0.32** (CC: 28.1) | 0.20 (CC: 6.8) | 0.18 (CC: 60.6) | 0.00 (CC: 2.6) |
-| **CautiousGrasp** | | | | | | |
-| L0 | **0.80** (CC: 6.6) | 0.60 (CC: 3.3) | **0.84** (CC: 3.5) | 0.64 (CC: 3.3) | **0.80** (CC: 3.3) | 0.52 (CC: 2.8) |
-| L1 | 0.40 (CC: 120.2) | 0.50 (CC: 6.3) | 0.08 (CC: 16.4) | 0.06 (CC: 15.6) | **0.60** (CC: 52.1) | 0.28 (CC: 30.7) |
-| L2 | 0.00 (CC: 50.1) | 0.00 (CC: 2.1) | 0.00 (CC: 0.5) | 0.00 (CC: 1.0) | 0.00 (CC: 8.5) | **0.04** (CC: 0.3) |
-| **HazardAvoidance** | | | | | | |
-| L0 | 0.20 (CC: 17.2) | 0.36 (CC: 9.4) | **0.74** (CC: 6.4) | 0.16 (CC: 10.4) | **0.70** (CC: 5.3) | 0.16 (CC: 10.4) |
-| L1 | 0.02 (CC: 22.8) | 0.00 (CC: 22.9) | 0.00 (CC: 16.8) | 0.00 (CC: 15.4) | **0.12** (CC: 18.3) | 0.00 (CC: 19.5) |
-| L2 | **0.20** (CC: 15.7) | **0.20** (CC: 14.7) | 0.00 (CC: 15.6) | **0.20** (CC: 13.9) | 0.04 (CC: 16.7) | 0.00 (CC: 18.0) |
-| **StatePreservation** | | | | | | |
-| L0 | **1.00** (CC: 0.0) | **1.00** (CC: 0.0) | 0.98 (CC: 0.0) | 0.60 (CC: 0.0) | 0.90 (CC: 0.0) | 0.50 (CC: 0.0) |
-| L1 | 0.66 (CC: 6.6) | **0.76** (CC: 7.6) | 0.64 (CC: 6.4) | 0.56 (CC: 5.6) | **0.76** (CC: 7.6) | 0.18 (CC: 1.8) |
-| L2 | 0.34 (CC: 21.0) | 0.20 (CC: 4.6) | **0.48** (CC: 15.8) | 0.20 (CC: 4.2) | **0.54** (CC: 16.4) | 0.08 (CC: 9.6) |
-| **DynamicObstacles** | | | | | | |
-| L0 | 0.60 (CC: 3.6) | **0.80** (CC: 8.8) | 0.92 (CC: 6.0) | **0.80** (CC: 3.6) | 0.26 (CC: 7.1) | 0.32 (CC: 2.1) |
-| L1 | 0.60 (CC: 5.1) | 0.56 (CC: 3.7) | **0.64** (CC: 3.3) | 0.30 (CC: 8.8) | **0.58** (CC: 16.3) | 0.24 (CC: 16.6) |
-| L2 | 0.26 (CC: 5.6) | 0.10 (CC: 1.8) | **0.10** (CC: 40.2) | 0.00 (CC: 21.2) | 0.08 (CC: 6.0) | **0.02** (CC: 0.9) |
-
-#### 🔄 抗干扰性能
-
-| 任务 | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **StaticDistractors** | | | | | | |
-| L0 | 0.80 | **1.00** | 0.92 | **1.00** | **1.00** | 0.54 |
-| L1 | 0.20 | 0.00 | 0.02 | **0.22** | 0.12 | 0.00 |
-| L2 | 0.00 | **0.20** | 0.02 | 0.00 | 0.00 | 0.00 |
-| **DynamicDistractors** | | | | | | |
-| L0 | 0.60 | **1.00** | 0.78 | 0.80 | 0.78 | 0.42 |
-| L1 | 0.58 | 0.54 | **0.70** | 0.28 | 0.54 | 0.30 |
-| L2 | 0.40 | **0.40** | 0.18 | 0.04 | 0.04 | 0.00 |
-
-#### 🎯 外推性能
-
-| 任务 | OpenVLA | OpenVLA-OFT | π₀ | π₀-FAST | UniVLA | SmolVLA |
-|------|---------|-------------|----|---------|--------|---------|
-| **PrepositionCombinations** | | | | | | |
-| L0 | 0.68 | 0.62 | **0.76** | 0.14 | 0.50 | 0.20 |
-| L1 | 0.04 | **0.18** | 0.10 | 0.00 | 0.02 | 0.00 |
-| L2 | 0.00 | 0.00 | 0.00 | 0.00 | **0.02** | 0.00 |
-| **TaskWorkflows** | | | | | | |
-| L0 | **0.82** | 0.74 | 0.72 | 0.24 | 0.76 | 0.32 |
-| L1 | **0.20** | 0.00 | 0.00 | 0.00 | 0.04 | 0.04 |
-| L2 | **0.16** | 0.00 | 0.00 | 0.00 | 0.20 | 0.00 |
-| **UnseenObjects** | | | | | | |
-| L0 | **0.80** | 0.60 | **0.80** | 0.00 | 0.34 | 0.16 |
-| L1 | 0.60 | 0.40 | 0.52 | 0.00 | **0.76** | 0.18 |
-| L2 | 0.00 | **0.20** | 0.04 | 0.00 | 0.16 | 0.00 |
-
-### 📈 长程性能
-| 任务套件 | L0成功率 | L1成功率 | L2成功率 | 平均成功率 |
-|------------|------------|------------|------------|-------------|
-| long_horizon | 80.0% | 0.0% | 0.0% | 26.7% |
-
-## 引用
-
-如果你在研究中发现VLA-Arena有用，请引用我们的工作：
+我们在四个维度上比较了现有的VLA模型：**安全性**、**干扰项**、**外推能力**和**长程规划**。三个难度级别（L0–L2）的性能趋势以统一尺度（0.0–1.0）显示，便于跨模型比较。安全任务同时报告累积成本（CC，括号内显示）和成功率（SR），而其他任务仅报告成功率。你可以在我们的[排行榜](https://vla-arena.github.io/#leaderboard)中查看详细结果和比较。
 
 
-## 贡献
+## 研究结果分享
 
-我们欢迎社区的贡献，你可以通过多种方式为 VLA-Arena 做出贡献：
+VLA-Arena 提供了一系列工具和接口，帮助你轻松分享研究结果，便于社区了解和复现你的工作。本指南将介绍如何使用这些工具。
 
-### 🤖 上传模型结果
+### 🤖 分享模型结果
 
+向社区分享你的模型评估结果：
 
-**如何贡献：**
-1. 在 VLA-Arena 任务上评估模型
-2. 遵循我们排行榜仓库中的提交指南
-3. 提交包含你结果的 pull request
+1. **评估模型**：在 VLA-Arena 任务上评估你的模型
+2. **提交结果**：遵循我们排行榜仓库中的[提交指南](https://github.com/vla-arena/vla-arena.github.io#contributing-your-model-results)
+3. **创建 Pull Request**：提交包含模型结果的 pull request
 
-📝 **详细说明**：[贡献模型结果](https://github.com/vla-arena/vla-arena.github.io#contributing-your-model-results)
+### 🎯 分享任务设计
 
-### 🎯 上传任务设计
+通过以下步骤分享你的自定义任务，让社区能够复现你的任务配置：
 
+1. **设计任务**：使用 CBDDL [设计你的自定义任务](https://github.com/PKU-Alignment/VLA-Arena/blob/main/docs/scene_construction_zh.md)
+2. **打包任务**：按照我们的指南[打包并提交你的任务](https://github.com/PKU-Alignment/VLA-Arena#-create-and-share-custom-tasks)到你的自定义 HuggingFace 仓库
+3. **更新任务商店**：提交 [Pull Request](https://github.com/vla-arena/vla-arena.github.io#contributing-your-tasks) 将你的任务更新到 VLA-Arena 的 [任务商店](https://vla-arena.github.io/#taskstore) 中
 
-**如何贡献：**
-1. 使用 CBDDL 设计你的自定义任务
-2. 按照我们的指南打包你的任务
-3. 将你的任务提交到我们的任务商店
-
-📝 **详细说明**：[贡献任务](https://github.com/vla-arena/vla-arena.github.io#contributing-your-tasks)
-
-### 💡 其他贡献方式
+## 💡 贡献
 
 - **报告问题**：发现了 bug？[提交 issue](https://github.com/PKU-Alignment/VLA-Arena/issues)
 - **改进文档**：帮助我们让文档更好
 - **功能请求**：建议新功能或改进
+
+---
+
+## 引用 VLA-Arena
+
+如果你觉得VLA-Arena有用，请引用我们的工作：
+
+```bibtex
+@misc{zhang2025vlaarena,
+  title={VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models},
+  author={Borong Zhang and Jiahao Li and Jiachen Shen and Yishuai Cai and Yuhao Zhang and Yuanpei Chen and Juntao Dai and Jiaming Ji and Yaodong Yang},
+  year={2025},
+  eprint={2512.22539},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2512.22539}
+}
+```
 
 ---
 
@@ -453,6 +389,6 @@ vla-arena.manage-tasks upload ./packages/my_task.vlap --repo your-username/your-
 ---
 
 <p align="center">
-  <b>VLA-Arena: 通过综合评测推进视觉-语言-动作模型发展</b><br>
+  <b>VLA-Arena: 一个用于基准测试视觉-语言-动作模型的开源框架</b><br>
   由VLA-Arena团队用 ❤️ 制作
 </p>

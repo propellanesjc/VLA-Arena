@@ -156,7 +156,7 @@ class ControlEnv:
         self.env.reset_from_xml_string(xml_string)
 
     def seed(self, seed):
-        self.env.seed(seed)
+        np.random.seed(seed)
 
     def set_init_state(self, init_state):
         return self.regenerate_obs_from_state(init_state)

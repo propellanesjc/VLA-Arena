@@ -31,6 +31,11 @@ def main():
         action='store_true',
         help='Overwrite existing checkpoint directory',
     )
+    train_p.add_argument('--nproc', type=int, default=None)
+    train_p.add_argument('--nnodes', type=int, default=1)
+    train_p.add_argument('--node_rank', type=int, default=0)
+    train_p.add_argument('--master_addr', type=str, default='127.0.0.1')
+    train_p.add_argument('--master_port', type=str, default='29500')
 
     # eval
     eval_p = sub.add_parser('eval')
