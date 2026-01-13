@@ -24,10 +24,13 @@ from dataclasses import dataclass, replace
 from typing import Iterable
 
 import imageio
+import json
 import numpy as np
+import random
 import tqdm
 import tyro
 import yaml
+from huggingface_hub import hf_hub_download
 from openpi_client import image_tools
 from openpi_client import websocket_client_policy as _websocket_client_policy
 
@@ -87,6 +90,89 @@ class GenerateConfig:
 
     seed: int = 7  # Random Seed (for reproducibility)
 
+    #################################################################################################################
+    # Instruction replacement parameters
+    #################################################################################################################
+    use_replacements: bool = True                     # Whether to use instruction replacements
+    replacements_file: str = "VLA-Arena/language_replacements"  # Path to replacements JSON file
+    replacement_probability: float = 1.0              # Probability of applying replacement (0.0 to 1.0)
+    replacement_level: int = 1                        # Level of instruction replacements (from 1 to 4)
+
+def load_replacements_dict(cfg: GenerateConfig) -> dict:
+    """Load the replacements dictionary from JSON file."""
+    if not cfg.use_replacements:
+        return {}
+    try:
+        if cfg.replacements_file == 'VLA-Arena/language_replacements':
+            filename = f"comprehensive_word_replacements_{cfg.replacement_level}.json"
+
+            file_path = hf_hub_download(
+                repo_id=cfg.replacements_file, 
+                filename=filename,
+                repo_type="dataset"
+            )
+
+            with open(file_path, 'r') as f:
+                replacements_list = json.load(f)
+        else:
+            with open(cfg.replacements_file, 'r') as f:
+                replacements_list = json.load(f)
+
+        replacements_dict = {}
+        for item in replacements_list:
+            original_key = item.get('original')  # original instructions
+            modified_value = item.get('modified')  # replaced instructions
+            if original_key and modified_value:
+                if original_key not in replacements_dict:
+                    replacements_dict[original_key] = []
+                replacements_dict[original_key].append(modified_value)
+        
+        logger.info(f"Loaded {len(replacements_dict)} replacement entries from {cfg.replacements_file}")
+        return replacements_dict
+        
+    except FileNotFoundError:
+        logger.info(f"Replacements file not found: {cfg.replacements_file}. Disabling replacements.")
+        return {}
+    except json.JSONDecodeError as e:
+        logger.info(f"Error parsing replacements file: {e}. Disabling replacements.")
+        return {}
+    except Exception as e:
+        logger.info(f"Unexpected error loading replacements: {e}. Disabling replacements.")
+        return {}
+
+def apply_instruction_replacement(original_instruction: str, replacements_dict: dict, cfg: GenerateConfig) -> str:
+    """
+    Apply random instruction replacement based on the replacements dictionary.
+    
+    Args:
+        original_instruction: The original instruction string
+        replacements_dict: Dictionary mapping normalized instructions to replacement lists
+        cfg: Configuration object containing replacement settings
+    
+    Returns:
+        The potentially replaced instruction string
+    """
+    if not cfg.use_replacements or not replacements_dict:
+        return original_instruction
+    
+    # Check if we should apply replacement based on probability
+    if random.random() > cfg.replacement_probability:
+        return original_instruction
+    
+    # Convert instruction to key format: spaces to underscores, lowercase
+    instruction_key = original_instruction.lower().replace(" ", "_")
+    
+    # Check if we have replacements for this instruction
+    if instruction_key in replacements_dict:
+        replacement_options = replacements_dict[instruction_key]
+        if replacement_options:
+            # Randomly select one replacement
+            selected_replacement = random.choice(replacement_options)
+            logger.info(f"Replaced instruction: '{original_instruction}' -> '{selected_replacement}'")
+            return selected_replacement.replace("_", " ")
+    
+    # If no replacement found, return original instruction
+    return original_instruction
 
 def check_unnorm_key(cfg: GenerateConfig, model) -> None:
     """Check that the model contains the action un-normalization key."""
@@ -156,6 +242,7 @@ def run_episode(
     cfg: GenerateConfig,
     env,
     task_description: str,
+    replacements_dict: dict,
     initial_state=None,
     log_file=None,
     client=None,
@@ -182,6 +269,13 @@ def run_episode(
     # Run episode
     success = False
     try:
+        if cfg.use_replacements:
+            replaced_task_description = apply_instruction_replacement(
+                task_description, replacements_dict, cfg
+            )
+            log_message(f"Replace Instruction: {task_description} -> {replaced_task_description}", log_file)
+            task_description = replaced_task_description
+
         while t < max_steps + cfg.num_steps_wait:
             # Do nothing for the first few timesteps to let objects stabilize
             if t < cfg.num_steps_wait:
@@ -265,6 +359,7 @@ def run_task(
     task_suite,
     task_id: int,
     task_level: int,
+    replacements_dict: dict,
     total_episodes=0,
     total_successes=0,
     log_file=None,
@@ -320,6 +415,7 @@ def run_task(
             cfg,
             env,
             task_description,
+            replacements_dict,
             initial_state,
             log_file,
             client,
@@ -433,6 +529,13 @@ def eval_vla_arena(cfg: GenerateConfig):
 
     tasks_payload: list[dict[str, object]] = []
 
+    if cfg.use_replacements:
+        replacements_dict = load_replacements_dict(cfg)
+        log_message(f"Using instruction replacements with probability {cfg.replacement_probability}", log_file)
+        log_message(f"Loaded {len(replacements_dict)} replacement entries", log_file)
+    else:
+        replacements_dict = {}
+
     for suite_name in suite_names:
         if suite_name not in benchmark_dict:
             raise ValueError(
@@ -472,6 +575,7 @@ def eval_vla_arena(cfg: GenerateConfig):
                 task_suite,
                 task_id,
                 task_level,
+                replacements_dict,
                 total_episodes,
                 total_successes,
                 log_file,
